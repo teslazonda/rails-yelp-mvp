@@ -3,6 +3,6 @@ class Restaurant < ApplicationRecord
   validates :name, presence: true
   validates :address, presence: true
   validates :category, presence: true
-  CATEGORIES =  [:chinese, :italian, :japanese, :french, :belgian ] #inclusion validation
-  #validates :category, inclusion: { in: CATEGORIES }
+  CATEGORIES =  ['chinese', 'italian', 'japanese', 'french', 'belgian' ].freeze
+  validates :category, inclusion: { in: CATEGORIES }
 end
